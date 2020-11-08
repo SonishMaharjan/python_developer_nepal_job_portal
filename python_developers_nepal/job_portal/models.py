@@ -25,7 +25,7 @@ class Company(models.Model):
     profile_description = models.TextField(max_length=2000)
     email = models.CharField(max_length=100)
     company_website = models.CharField(max_length=100, null=True)
-    company_logo = models.ImageField(upload_to="company_logo")
+    company_logo = models.ImageField(upload_to="company_logo", null=True)
     created_at = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     def __str__(self):
